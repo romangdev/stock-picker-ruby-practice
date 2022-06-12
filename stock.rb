@@ -6,8 +6,7 @@ def stock_picker(prices)
         for sell_price in (idx + 1)..(prices.length - 1)
             if prices[sell_price] - buy_price > highest_profit
                 highest_profit = prices[sell_price] - buy_price
-                buy_sell[0] = idx
-                buy_sell[1] = sell_price
+                buy_sell = [idx, sell_price]
             end
         end
     end
